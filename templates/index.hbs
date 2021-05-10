@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMeTo</title>
+    <!-- <link rel="stylesheet" href="Frosthack.css"> -->
+    <link rel="stylesheet" href="frosthack_without.css">
+    <!--link rel="stylesheet" media="screen and (max-width : 1444px)" href="phone.css">-->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+<section id="whole_page">
+    <section id="nav_grid">
+    <nav id="navbar">
+        <div id="logo">
+            <img src="Frosthack/logo.png" alt="MyOnlineMeal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Create Event</a></li>
+            <li class="item"><a href="#client-section">Upcoming Events</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    </section>
+
+    <section id="home">
+        <h1 id = "home_heading" class="h_primary"> A unique way to avoid clashes </h1>
+        <p> You too fed up of event clashes at your college?
+            <br> Do you also end up attending only one event, even if you want to attend both?
+             </p>
+             <br>
+        <p>So here we are !!! </p>
+
+    </section>
+
+    <section id="main_section">
+        <div id="create_event"> 
+            <h1 class="h_primary"> Create Your Event Here </h1>
+            <div class="main_box">
+                Check the availability.
+                
+                <br>
+                <form action="http://localhost:3000/datefind" method="get" id = "date_check">
+                <input type="date" name="date" id="date_input">
+                
+
+                    <button type="submit" id="check">Submit</button>
+                </form>
+                <p>
+                    {{message}}
+                </p>
+                <br>
+                <p>
+                    Book your slots Here
+                </p>
+                <form action="http://localhost:3000/findAndAdd" method="get" id="book_form">
+
+                    <input type="date" name="date" id="d">
+                    <br>
+                    <input type="text" name = "user" id = "n" placeholder="Enter name">
+                    <input type="text" name = "event" id = "ev" placeholder="Describe your event">
+
+                    <input type="time" name = "time1"  id = "t1" placeholder="Type time schedule">
+                    to 
+                    <input type="time" name = "time2" id = "t2" placeholder="Type time schedule">
+                    <button type="submit" id = "booking">Submit</button>
+                </form>
+        </div></div>
+        <div id="upcoming"> 
+            <h1 class="h_primary"> Upcoming Events </h1>
+            <div class="main_box" id = "up_coming">
+
+                <p id = "upcoming_data">
+                    12th May 2021 -6:00pm to 7:00pm
+                    <br>
+                    Programming club Intro session.
+                    <br>
+                    <br>
+                </p>
+                  <p id = "upcoming_data">
+                    12th May 2021 -8:00pm to 9:00pm
+                    <br>
+                    Robotronic club invitation talk.
+                </p>
+        </div></div>
+    </section>
+
+    <section id="contact_us">
+        <h1 id = "contact_heading" class="h_primary"> Meet our Team </h1>
+        <div id = "pong" class="team_member"> 
+            <img src="Frosthack/pong.png" alt="">
+            <div class = "two_words">Laishram Pongthangamba <br>
+                Backend <br>
+                b19011@students.iitmandi.ac.in
+
+            </div></div>
+        <div id = "abhi" class="team_member"> 
+            <img src="Frosthack/abhi.jpg" alt="">
+            <div class = "two_words"> 
+                Abhishek Mishra <br>
+                Frontend <br>
+                b19231@students.iitmandi.ac.in
+                 </div></div>
+        <div id = "jay" class="team_member"> 
+            <img src="Frosthack/jay.png" alt="">
+            <div class = "two_words">Jaikishan Prajapati <br>
+                Database <br>
+                b19166@students.iitmandi.ac.in
+            </div></div>
+    </section>
+
+    <section id="footer">
+        Copyright &copy;www.EMeTo.com. All rights reserved!
+    </section>
+</section>  
+<!script src="/js/app.js"></script>
+
+</body>
+</html>
